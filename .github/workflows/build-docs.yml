@@ -11,7 +11,7 @@ permissions:
   
 env:
   INSTANCE: 'Writerside/srs'
-  ARTIFACT: 'webHelpsrs2-all.zip'
+  ARTIFACT: 'webHelpSRS2-all.zip'
   DOCKER_VERSION: '241.18775'
 
 jobs:
