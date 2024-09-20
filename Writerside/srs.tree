@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="srs"
+                 name="Software Requirment Specification"
+                 start-page="projekt-adatok.md">
+
+    <toc-element topic="projekt-adatok.md"/>
+    <toc-element topic="Bevezetés.md"/>
+    <toc-element topic="Funkcionális-Követelmények-SRS.md"/>
+    <toc-element topic="Kölső-interfész-követelményei-EIR.md"/>
+    <toc-element topic="Nem-funkcionális-követelmények-NFR.md"/>
+    <toc-element topic="Definiciók-és-rövidítések.md"/>
+</instance-profile>
