@@ -44,6 +44,7 @@
 #### Modify User Profile
 ##### User Story Jegyzék:{id="userprofile-modifyuserprofile-userstories"}
 - [#21](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/21)
+- [#28](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/28)
 ##### Követelmények:
 - Lehetőség a felhasználói profil módosítására
 - Megfelelő jogok nélkül csak a saját profilt lehet módosítani
@@ -98,10 +99,34 @@
 ### Adminisztrációs funkciók
 ##### User Story Jegyzék:{id="admin-userstories"}
 - [#29](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/29)
+- [#16](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/16)
+
 #### Jelszó módosítása 
 
 ##### Követelmények:{id="admin-newpass-requirments"}
 - Lehetőség más felhasználó jelszavának  módosítására
+
+#### Felhasználói csoportok
+
+##### Követelmények:{id="admin-usergroups-requirments"}
+- Lehetőség felhasználókat felhasználói csoportokba rendelni
+- Lehetőség felhasználói csoportokhoz jogosultságokat rendelni
+- "jogöröklés": ha egy csoport rendelkezik egy joggal, akkor a felhasználó aki benne van, az is rendelkezzen vele.
+- Csoport jogosultságainak szerkesztése
+- Lehetőség csoport leírás megadására
+- Egy felhasználó több csoportba is tartozhat
+- Lehetőség csoportok létrehozására
+
+#### Egyéni jogosultságok
+
+##### Követelmények:{id="admin-customprivileges-requirments"}
+- Lehetőség felhasználóhoz közvetlenül jogosultságokat rendelni és elvenni
+
+#### További felhasználói műveletek
+
+##### Követelmények:{id="admin-userfunctions-requirments"}
+- Lehetőség a felhasználók közötti keresésre
+- Lehetőség a felhasználó korlátozására (nem tud bejelentkezni)
 
 
 ## Páciensek kezelése
@@ -186,6 +211,7 @@
 ### Páciens keresés
 ##### User Story Jegyzék:{id="patientmanagement-searchpatient-userstories"}
 - [#40](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/40)
+- [#39](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/39)
 #### Követelmények: {id="patientmanagement-searchpatient-requirments"}
 - Lehetőség keresésre a páciensek között
 
@@ -266,12 +292,14 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 #### Követelmények: {id="appointmentmanagement-deleteappointment-requirments"}
 - Lehetőség az időpontok törlésére
 - Email értesítés a tulajdonosnak az időpont törléséről
+- Lehetőség a tulajdonos számára is a saját időpont törlésére
 
 ### Időpont áthelyezése
 #### Követelmények: {id="appointmentmanagement-moveappointment-requirments"}
 - Lehetőség az időpontok áthelyezésére
 - Email értesítés a tulajdonosnak az időpont áthelyezéséről
 - Ha az időpont már egy foglalt időponthoz kerül áthúzásra, Akkor dobja vissza a kiinduló mezőjébe.
+- Lehetőség a tulajdonos számára is a saját időpont áthelyezésére
 
 ### Időpont adatainak megtekintése
 #### Követelmények: {id="appointmentmanagement-viewappointment-requirments"}
@@ -282,6 +310,7 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
     - Megjegyzés
     - Állatorvos
 - Ha az időpont már egy foglalt időponthoz kerül áthúzásra, Akkor dobja vissza a kiinduló mezőjébe.
+- Lehetőség a tulajdonos számára is a saját időpont adatainak megtekintésére
 
 ### Időpontok kezelése {id="appointmentmanagement-viewappointments"}
 #### Követelmények: {id="appointmentmanagement-viewappointments-requirments"}
@@ -291,6 +320,7 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
   - Havi
 - Lehetőség hogy vissza ugorjon a felhasználó a mai napra
 - Lehetőség az időpontok szűrésére állatorvos alapján
+- Lehetőség a tulajdonos számára is a saját időpontjainak megtekintésére
 
 ## Gyógyszerkészlet kezelése
 ### Diagram: Funkciók elérése {collapsible="true" id="medicationstockpile-featurediagram"}
