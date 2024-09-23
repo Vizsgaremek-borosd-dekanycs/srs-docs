@@ -28,6 +28,9 @@
 **** Keresési találatok
 *****[#SkyBlue] View User Profile  (megfelelő jogosultsággal)
 ******[#SkyBlue] Modifiy User Profile  (megfelelő jogosultsággal)
+**[#SkyBlue] Bejelentkezés
+**[#SkyBlue] Regisztráció
+
 @endwbs
 ```
 ### User Profile
@@ -54,6 +57,52 @@
   - Emelet (opcionális)
   - Ajtószám (opcionális)
 - Opcionális adatokon kívül mindent ki kell tölteni.
+### Hitelesítés
+##### User Story Jegyzék:{id="auth-userstories"}
+- [#29](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/29)
+- [#36](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/36)
+- [#35](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/35)
+
+#### Bejelentkezés
+##### Követelmények:{id="auth-login-requirments"}
+- Lehetőség bejelentkezésre a nyilvántartóba emaillel és jeleszóval
+- Lehetőség elfelejtett jelszó oldal megnyitására
+-  Ha az ímélcím nem létezik az adatbázisban vagy nem felel meg a formai szabványoknak, Akkor nem engedi a felhasználó továbblépését és a mező alatt kiírja a hibát.
+-  Ha hibás a megadott jelszó, Akkor nem engedi a felhasználó továbblépését és a mező alatt kiírja a hibát.
+- Ha a fentiek alapján sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
+- Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
+
+#### Regisztráció
+##### Követelmények:{id="auth-register-requirments"}
+- Lehetőség regisztrációra az alábbiak megadásával:
+  - Email
+  - Jelszó
+  - Telefonszám
+- Opcionálisan megadható legyen a következő értékek:
+  - Profilkép
+-  Ha az email már használva van vagy nem felel meg a formai szabványoknak, Akkor nem engedi az adat mentését és a mező alatt kiírja a hibát.
+-  Ha a két jelszó nem egyezik, Akkor nem engedi az adat mentését és a mező alatt kiírja a hibát.
+-  Ha a profilkép mérete nagyobb a megengedettnél, Akkor nem engedi az adat mentését és a mező alatt kiírja a hibát.
+-  Ha a telefonszám nem csak 9 számot tartalmaz, Akkor nem engedi az adat mentését és a mező alatt kiírja a hibát.
+-  Ha a fentiek alapján sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
+-  Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
+
+#### Elfelejtett jelszó
+##### Követelmények:{id="auth-forgotpass-requirments"}
+- Lehetőség új jelszó megadására anélkül hogy a régit ismerné a felhasználó (harmadik fél beavatkozása nélkül)
+
+#### Jelszó módosítása
+##### Követelmények:{id="auth-newpass-requirments"}
+- Lehetőség a régi jelszó lecserélésére harmadik fél beavatkozása nélkül.
+
+### Adminisztrációs funkciók
+##### User Story Jegyzék:{id="admin-userstories"}
+- [#29](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/29)
+#### Jelszó módosítása 
+
+##### Követelmények:{id="admin-newpass-requirments"}
+- Lehetőség más felhasználó jelszavának  módosítására
+
 
 ## Páciensek kezelése
 ### Diagram: Funkciók elérése{collapsible="true" id="patientmanagement-featurediagram"}
@@ -73,10 +122,10 @@
 **** Keresési eredmények
 ***** View User Profile
 ****** Hozzárendelt Páciensek
-******* Páciens Adatlap
+*******[#SkyBlue] Páciens Adatlap
+
 ********[#SkyBlue] Gyógyszerezési történet
 ******** Kezelések
-
 *********[#SkyBlue] Új kezelés felvétele
 *********[#SkyBlue] Kezelés módosítása
 
@@ -123,6 +172,23 @@
 - Ha a fentiek alapján sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 - Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 
+### Páciens adatlap
+##### User Story Jegyzék:{id="patientmanagement-patientdatasheet-userstories"}
+- [#40](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/40)
+- [#41](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/41)
+#### Követelmények: {id="patientmanagement-patientdatasheet-requirments"}
+- Lehetőség páciensek adatainak megtekintésére
+- Lehetőség páciensek oltásainak megtekintésére
+- Lehetőség páciensek kezeléseinek megtekintésére
+- Lehetőség pácienseknek korábbi benntartásainak megtekintéseire
+- Lehetőség a páciensre vonatkozó összes adat megtekintésére
+
+### Páciens keresés
+##### User Story Jegyzék:{id="patientmanagement-searchpatient-userstories"}
+- [#40](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/40)
+#### Követelmények: {id="patientmanagement-searchpatient-requirments"}
+- Lehetőség keresésre a páciensek között
+
 ### Felírt gyógyszerek megtekintése
 ##### User Story Jegyzék:{id="patientmanagement-viewmedication-userstories"}
 - [#12](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/12)
@@ -149,6 +215,16 @@
 - Ha az állat neme nincs kiválasztva, Akkor nem engedi az adat rögzítését és a mező alatt kiírja a hibát.
 - Ha a fentiek alapján sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 - Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
+
+### Állat faj felvétele
+##### User Story Jegyzék:{id="patientmanagement-breedmanagement-userstories"}
+- [#33](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/33)
+
+#### Követelmények: {id="patientmanagement-breedmanagement-requirments"}
+- Amennyiben a páciens felvételénél nem található az állat fajánál a megfelelő érték, szabad szöveget is lehessen felvinni
+- Amenniyben szabad szöveg kerül a faj helyére, az adminisztrátornak jóvá kelljen hagynia az új állatfaj felvételét, és ki kelljen töltenie a faj adatlapját
+- Értesítés küldése a jóváhagyásra váró állatfalyokról az adminisztrátornak (weblapon keresztül)
+- Lehetőség az új faj mentésére
 
 ## Időpontok kezelése
 ### Diagram: Funkciók elérése {collapsible="true" id="appointmentmanagement-featurediagram"}
@@ -286,13 +362,20 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 **** (×××)
 ***** Páciens adatlap
 ******[#SkyBlue] Páciens felvétele megfigyelésre
+******[#SkyBlue] Megfigyelési adatlap megtekintése
 ***[#SkyBlue] Megfigyelt állatok kezelése
 **** Páciens Adatlapja
 *****[#SkyBlue] Megfigyelés lezárása (haza engedés)
 *****[#SkyBlue] Gyógyszerezési ütemezés szerkesztése
 *****[#SkyBlue] Megfigyelés adatainak módosítása
+*****[#SkyBlue] Megfigyelési adatlap megtekintése
 @endwbs
 ```
+### User Story Jegyzék:{id="observationmanagement-userstories"}
+- [#44](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/44)
+- [#20](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/20)
+
+
 
 ### Megfigyelt állatok megtekintése {id="observationmanagement-view"}
 #### Követelmények: {id="observationmanagement-view-requirments"}
@@ -300,11 +383,35 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 - Lehetőség a megfigyelt állatok megtekintésére
 - Lehetőség a megfigyelt állat adatlapjának megnyitására
 
+### Megfigyelési adatlap megtekintése {id="observationmanagement-datasheet"}
+#### Követelmények: {id="observationmanagement-datasheet-requirments"}
+- Lehetőség a megfigyelés adatainak megtekintésére az adatlapon keresztül:
+  - Megfigyelés oka
+  - Megfigyelés javasolt ideje
+  - Állat tároló azonosító 
+
+### Megfigyelés elinditása {id="observationmanagement-open"}
+#### Követelmények: {id="observationmanagement-open-requirments"}
+- Lehetőség hogy a megfigyelt állat megfigyelését elindítsák (adatlapon keresztül) a következők megadásával:
+  - Megfigyelés oka
+  - Megfigyelés javasolt ideje
+  - Állat tároló azonosító 
+
 ### Megfigyelés lezárása {id="observationmanagement-close"}
 #### Követelmények: {id="observationmanagement-close-requirments"}
-- Lehetőség hogy a megfigyelt állat megfigyelését leállítsák
+- Lehetőség hogy a megfigyelt állat megfigyelését leállítsák (adatlapon keresztül)
+- Lehetőség megjegyzés megadására
 
 ### Megfigyelés adatainak módosítása {id="observationmanagement-modifydata"}
 #### Követelmények: {id="observationmanagement-modifydata-requirments"}
 - Lehetőség az alábbiak módosítására: 
+  - Megfigyelés oka
+  - Megfigyelés javasolt ideje
+  - Állat tároló azonosító 
 
+### Megfigyelés alatt álló gyógyszerezésének kezelése
+{id="observationmanagement-managemedicaton"}
+#### Követelmények: {id="observationmanagement-managemedicaton-requirments"}
+- Lehetőség a gyógyszerezési ütemezés beállítására (perc alapú ütemezés, a gyógyszereket a katalógusból válassza ki)
+- Lehetőség gyógyszerezési ütemezés szerkesztésére
+- Lehetőség a gyógyszerezési ütemezés törlésére
