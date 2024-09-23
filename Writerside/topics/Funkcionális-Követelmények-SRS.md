@@ -32,9 +32,15 @@
 ```
 ### User Profile
 #### View User Profile
+##### User Story Jegyzék:{id="userprofile-viewuserprofile-userstories"}
+- [#21](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/21)
+
+##### Követelmények:{id="userprofile-viewuserprofile-requirments"}
 - Lehetőség saját felhasználói profil megtekintésére
 - Lehetőség más felhasználói profiljának megtekintésére megfelelő jogosultsággal
 #### Modify User Profile
+##### User Story Jegyzék:{id="userprofile-modifyuserprofile-userstories"}
+- [#21](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/21)
 ##### Követelmények:
 - Lehetőség a felhasználói profil módosítására
 - Megfelelő jogok nélkül csak a saját profilt lehet módosítani
@@ -50,7 +56,7 @@
 - Opcionális adatokon kívül mindent ki kell tölteni.
 
 ## Páciensek kezelése
-### Diagram: Funkciók elérése {collapsible="true" id="patientmanagement-featurediagram"}
+### Diagram: Funkciók elérése{collapsible="true" id="patientmanagement-featurediagram"}
 ```plantuml
 @startwbs
 * Kezdőlap
@@ -78,6 +84,8 @@
 @endwbs
 ```
 ### Új kezelés felvétele
+##### User Story Jegyzék:{id="patientmanagement-newtreatment-userstories"}
+- [#11](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/11)
 #### Követelmények: {id="patientmanagement-newtreatment-requirments"}
 - Lehetőség egy új kezelés felvételére
 - Lehetőség a következő adatok felvételére:
@@ -116,10 +124,14 @@
 - Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 
 ### Felírt gyógyszerek megtekintése
+##### User Story Jegyzék:{id="patientmanagement-viewmedication-userstories"}
+- [#12](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/12)
 #### Követelmények: {id="patientmanagement-viewmedication-requirments"}
 - A kezelések során megadott összes gyógyszer (Kezelés adatlap -> Felírt gyógyszerek) listázása időponttal és kezelőorvossal.
 
 ### Új páciens felvétele
+##### User Story Jegyzék:{id="patientmanagement-newpatient-userstories"}
+- [#10](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/10)
 #### Követelmények: {id="patientmanagement-newpatient-requirments"}
 - Lehetőség új páciens felvételére
 - Új páciens felvétele a következő adatokkal:
@@ -151,6 +163,10 @@
 ****[#SkyBlue] Időpont adatainak megtekintése
 @endwbs
 ```
+
+### User Story Jegyzék:{id="appointmentmanagement-userstories"}
+- [#19](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/19)
+
 ### Időpont felvétele
 **Időpontok kezelése** oldalon egy naptárban ki lehessen jelölni egy időpontot. 
 A kijelölés után felugrik egy adatlap amit ki kell tölteni.
@@ -215,6 +231,12 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 
 @endwbs
 ```
+
+### User Story Jegyzék:{id="medicationstockpile-userstories"}
+- [#42](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/42)
+- [#43](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/43)
+- [#15](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/15)
+
 ### Új gyógyszer felvétele
 #### Követelmények: {id="medicationstockpile-newmedication-requirments"}
 - Lehetőség új gyógyszerek felvételére az adatbázisban
