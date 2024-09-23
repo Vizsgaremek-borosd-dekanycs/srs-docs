@@ -278,6 +278,11 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 - Lehetőség a megfigyelt állatok megtekintésére
 - Lehetőség a megfigyelt állat adatlapjának megnyitására
 
+### Megfigyelés lezárása {id="observationmanagement-close"}
+#### Követelmények: {id="observationmanagement-close-requirments"}
+- Lehetőség hogy a megfigyelt állat megfigyelését leállítsák
 
-
+### Megfigyelés adatainak módosítása {id="observationmanagement-modifydata"}
+#### Követelmények: {id="observationmanagement-modifydata-requirments"}
+- Lehetőség az alábbiak módosítására: 
 
