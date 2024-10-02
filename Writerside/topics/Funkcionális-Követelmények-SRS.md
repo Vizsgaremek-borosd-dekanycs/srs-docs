@@ -24,6 +24,7 @@
 *** Saját profil
 ****[#SkyBlue] View User Profile
 *****[#SkyBlue] Modify User Profile
+*****[#SkyBlue] Saját állatok megtekintése
 *** Felhasználók kezelése (megfelelő jogosultsággal)
 **** Keresési találatok
 *****[#SkyBlue] View User Profile  (megfelelő jogosultsággal)
@@ -38,7 +39,9 @@
 ##### User Story Jegyzék:{id="userprofile-viewuserprofile-userstories"}
 - [#21](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/21)
 
-##### Követelmények:{id="userprofile-viewuserprofile-requirments"}
+
+##### Követelmények:{id="userprofile-viewuserprofile-requirements"}
+
 - Lehetőség saját felhasználói profil megtekintésére
 - Lehetőség más felhasználói profiljának megtekintésére megfelelő jogosultsággal
 #### Modify User Profile
@@ -58,6 +61,17 @@
   - Emelet (opcionális)
   - Ajtószám (opcionális)
 - Opcionális adatokon kívül mindent ki kell tölteni.
+
+### Saját állatok adatlapjainak megtekintése
+##### User Story Jegyzék: {id="userprofile-viewownpets"}
+- [#10](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/10)
+- [#28](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/28)
+- [#37](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/37)
+
+##### Követelmények: 
+- Lehetőség az állatok adatainak külön-külön való megtekintésére.
+
+
 ### Hitelesítés
 ##### User Story Jegyzék:{id="auth-userstories"}
 - [#29](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/29)
@@ -65,7 +79,9 @@
 - [#35](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/35)
 
 #### Bejelentkezés
-##### Követelmények:{id="auth-login-requirments"}
+
+##### Követelmények:{id="auth-login-requirements"}
+
 - Lehetőség bejelentkezésre a nyilvántartóba emaillel és jeleszóval
 - Lehetőség elfelejtett jelszó oldal megnyitására
 -  Ha az ímélcím nem létezik az adatbázisban vagy nem felel meg a formai szabványoknak, Akkor nem engedi a felhasználó továbblépését és a mező alatt kiírja a hibát.
@@ -74,7 +90,9 @@
 - Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 
 #### Regisztráció
-##### Követelmények:{id="auth-register-requirments"}
+
+##### Követelmények:{id="auth-register-requirements"}
+
 - Lehetőség regisztrációra az alábbiak megadásával:
   - Email
   - Jelszó
@@ -89,11 +107,12 @@
 -  Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 
 #### Elfelejtett jelszó
-##### Követelmények:{id="auth-forgotpass-requirments"}
+##### Követelmények:{id="auth-forgotpass-requirements"}
 - Lehetőség új jelszó megadására anélkül hogy a régit ismerné a felhasználó (harmadik fél beavatkozása nélkül)
 
 #### Jelszó módosítása
-##### Követelmények:{id="auth-newpass-requirments"}
+##### Követelmények:{id="auth-newpass-requirements"}
+
 - Lehetőség a régi jelszó lecserélésére harmadik fél beavatkozása nélkül.
 
 ### Adminisztrációs funkciók
@@ -103,12 +122,14 @@
 
 #### Jelszó módosítása 
 
-##### Követelmények:{id="admin-newpass-requirments"}
+##### Követelmények:{id="admin-newpass-requirements"}
+
 - Lehetőség más felhasználó jelszavának  módosítására
 
 #### Felhasználói csoportok
 
-##### Követelmények:{id="admin-usergroups-requirments"}
+
+##### Követelmények:{id="admin-usergroups-requirements"}
 - Lehetőség felhasználókat felhasználói csoportokba rendelni
 - Lehetőség felhasználói csoportokhoz jogosultságokat rendelni
 - "jogöröklés": ha egy csoport rendelkezik egy joggal, akkor a felhasználó aki benne van, az is rendelkezzen vele.
@@ -119,12 +140,14 @@
 
 #### Egyéni jogosultságok
 
-##### Követelmények:{id="admin-customprivileges-requirments"}
+
+##### Követelmények:{id="admin-customprivileges-requirements"}
 - Lehetőség felhasználóhoz közvetlenül jogosultságokat rendelni és elvenni
 
 #### További felhasználói műveletek
 
-##### Követelmények:{id="admin-userfunctions-requirments"}
+##### Követelmények:{id="admin-userfunctions-requirements"}
+
 - Lehetőség a felhasználók közötti keresésre
 - Lehetőség a felhasználó korlátozására (nem tud bejelentkezni)
 
@@ -160,7 +183,9 @@
 ### Új kezelés felvétele
 ##### User Story Jegyzék:{id="patientmanagement-newtreatment-userstories"}
 - [#11](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/11)
-#### Követelmények: {id="patientmanagement-newtreatment-requirments"}
+
+#### Követelmények: {id="patientmanagement-newtreatment-requirements"}
+
 - Lehetőség egy új kezelés felvételére
 - Lehetőség a következő adatok felvételére:
   - Diagnózis
@@ -178,7 +203,9 @@
 - Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 
 ### Kezelés adatlapjának módosítása
-#### Követelmények: {id="patientmanagement-modifytratment-requirments"}
+
+#### Követelmények: {id="patientmanagement-modifytratment-requirements"}
+
 - Lehetőség a kezelés adatlapjának módosítására
 - Lehetőség az alábbiak módosítására:
   - Diagnózis
@@ -197,34 +224,43 @@
 - Ha a fentiek alapján sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 - Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 
+
 ### Páciens adatlap
 ##### User Story Jegyzék:{id="patientmanagement-patientdatasheet-userstories"}
 - [#40](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/40)
 - [#41](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/41)
-#### Követelmények: {id="patientmanagement-patientdatasheet-requirments"}
+#### Követelmények: {id="patientmanagement-patientdatasheet-requirements"}
+
 - Lehetőség páciensek adatainak megtekintésére
 - Lehetőség páciensek oltásainak megtekintésére
 - Lehetőség páciensek kezeléseinek megtekintésére
 - Lehetőség pácienseknek korábbi benntartásainak megtekintéseire
 - Lehetőség a páciensre vonatkozó összes adat megtekintésére
 
+
 ### Páciens keresés
 ##### User Story Jegyzék:{id="patientmanagement-searchpatient-userstories"}
 - [#40](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/40)
 - [#39](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/39)
-#### Követelmények: {id="patientmanagement-searchpatient-requirments"}
+
+#### Követelmények: {id="patientmanagement-searchpatient-requirements"}
+
 - Lehetőség keresésre a páciensek között
 
 ### Felírt gyógyszerek megtekintése
 ##### User Story Jegyzék:{id="patientmanagement-viewmedication-userstories"}
 - [#12](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/12)
-#### Követelmények: {id="patientmanagement-viewmedication-requirments"}
+
+#### Követelmények: {id="patientmanagement-viewmedication-requirements"}
+
 - A kezelések során megadott összes gyógyszer (Kezelés adatlap -> Felírt gyógyszerek) listázása időponttal és kezelőorvossal.
 
 ### Új páciens felvétele
 ##### User Story Jegyzék:{id="patientmanagement-newpatient-userstories"}
 - [#10](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/10)
-#### Követelmények: {id="patientmanagement-newpatient-requirments"}
+
+#### Követelmények: {id="patientmanagement-newpatient-requirements"}
+
 - Lehetőség új páciens felvételére
 - Új páciens felvétele a következő adatokkal:
   - Név
@@ -246,7 +282,9 @@
 ##### User Story Jegyzék:{id="patientmanagement-breedmanagement-userstories"}
 - [#33](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/33)
 
-#### Követelmények: {id="patientmanagement-breedmanagement-requirments"}
+
+#### Követelmények: {id="patientmanagement-breedmanagement-requirements"}
+
 - Amennyiben a páciens felvételénél nem található az állat fajánál a megfelelő érték, szabad szöveget is lehessen felvinni
 - Amenniyben szabad szöveg kerül a faj helyére, az adminisztrátornak jóvá kelljen hagynia az új állatfaj felvételét, és ki kelljen töltenie a faj adatlapját
 - Értesítés küldése a jóváhagyásra váró állatfalyokról az adminisztrátornak (weblapon keresztül)
@@ -273,7 +311,9 @@
 **Időpontok kezelése** oldalon egy naptárban ki lehessen jelölni egy időpontot. 
 A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 
-#### Követelmények: {id="appointmentmanagement-newappointment-requirments"}
+
+#### Követelmények: {id="appointmentmanagement-newappointment-requirements"}
+
 - Lehetőség új időpont létrehozására
 - Lehetőség az alábbiak rögzítésére az új időponthoz:
   - Gazda neve
@@ -289,20 +329,26 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 - Ha az állat neve nem csak betűt tartalmaz, Akkor nem engedi az adat rögzítését és a mező alatt kiírja a hibát.
 
 ### Időpont törlése
-#### Követelmények: {id="appointmentmanagement-deleteappointment-requirments"}
+
+#### Követelmények: {id="appointmentmanagement-deleteappointment-requirements"}
+
 - Lehetőség az időpontok törlésére
 - Email értesítés a tulajdonosnak az időpont törléséről
 - Lehetőség a tulajdonos számára is a saját időpont törlésére
 
 ### Időpont áthelyezése
-#### Követelmények: {id="appointmentmanagement-moveappointment-requirments"}
+
+#### Követelmények: {id="appointmentmanagement-moveappointment-requirements"}
+
 - Lehetőség az időpontok áthelyezésére
 - Email értesítés a tulajdonosnak az időpont áthelyezéséről
 - Ha az időpont már egy foglalt időponthoz kerül áthúzásra, Akkor dobja vissza a kiinduló mezőjébe.
 - Lehetőség a tulajdonos számára is a saját időpont áthelyezésére
 
 ### Időpont adatainak megtekintése
-#### Követelmények: {id="appointmentmanagement-viewappointment-requirments"}
+
+#### Követelmények: {id="appointmentmanagement-viewappointment-requirements"}
+
 - Lehetőség az alábbiak megtekintésére az időpontról:
     - Gazda neve
     - Állat neve
@@ -313,7 +359,8 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 - Lehetőség a tulajdonos számára is a saját időpont adatainak megtekintésére
 
 ### Időpontok kezelése {id="appointmentmanagement-viewappointments"}
-#### Követelmények: {id="appointmentmanagement-viewappointments-requirments"}
+#### Követelmények: {id="appointmentmanagement-viewappointments-requirements"}
+
 - Naptár alapú megjelentítés
 - Nézet változtatása:
   - Heti
@@ -344,7 +391,9 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 - [#15](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/15)
 
 ### Új gyógyszer felvétele
-#### Követelmények: {id="medicationstockpile-newmedication-requirments"}
+
+#### Követelmények: {id="medicationstockpile-newmedication-requirements"}
+
 - Lehetőség új gyógyszerek felvételére az adatbázisban
 - Lehetőség a következők megadására a gyógyszerek felvétele során:
   - Gyógyszer Név
@@ -361,7 +410,9 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 - Ha szerver miatt sikertelen a feltöltés, Akkor feldob egy ablakot és kiírja, hogy "Hiba".
 
 ### Gyógyszer adatlap módosítása
-#### Követelmények: {id="medicationstockpile-modifymedication-requirments"}
+
+#### Követelmények: {id="medicationstockpile-modifymedication-requirements"}
+
 - Lehetőség a katalógusban szereplő gyógyszerek módosítására
 - Lehetőség a következők módosítására:
   - Gyógyszer Név
@@ -371,7 +422,9 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
   - További megjegyzés
 
 ### Gyógyszerkészlet figyelmeztetés
-#### Követelmények: {id="medicationstockpile-stockpilealert-requirments"}
+
+#### Követelmények: {id="medicationstockpile-stockpilealert-requirements"}
+
 - Készlet alsó limit számának beállítására lehetőség (gyógyszer adatlapján)
 - Amennyiben eléri az alsó limitet, az adminisztrátornak a rendszer email értesítést küld
 - Amennyiben eléri az alsó limitet, a rendszer Gyógyszerkészlet kezelése oldalon is feltünteti a figyelmeztetést
@@ -406,34 +459,59 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 - [#20](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/20)
 
 
+### Páciens felvétele megfigyelés alá
+##### User Story Jegyzék: {id="patientmanagement-patientundercontroll"}
+
+- [#39](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/39)
+- [#45](https://github.com/Vizsgaremek-borosd-dekanycs/Vizsgaremek/issues/45)
+
+#### Követelmények:
+{id="observationmanagement-newobservation-requirements"}
+- Lehetőség páciensek adatainak megtekintésére
+- Lehetőség páciensek oltásainak megtekintésére
+- Lehetőség páciensek kezeléseinek megtekintésére
+- Lehetőség pácienseknek korábbi benntartásainak megtekintéseire
+- Lehetőség páciens benntartására
 
 ### Megfigyelt állatok megtekintése {id="observationmanagement-view"}
-#### Követelmények: {id="observationmanagement-view-requirments"}
+#### Követelmények: {id="observationmanagement-view-requirements"}
+
+
+
+
 - Lehetőség a gyógyszerezési ütemezés megtekintésére (ütemezés diagram)
 - Lehetőség a megfigyelt állatok megtekintésére
 - Lehetőség a megfigyelt állat adatlapjának megnyitására
 
 ### Megfigyelési adatlap megtekintése {id="observationmanagement-datasheet"}
-#### Követelmények: {id="observationmanagement-datasheet-requirments"}
+
+#### Követelmények: {id="observationmanagement-datasheet-requirements"}
+
 - Lehetőség a megfigyelés adatainak megtekintésére az adatlapon keresztül:
   - Megfigyelés oka
   - Megfigyelés javasolt ideje
   - Állat tároló azonosító 
 
 ### Megfigyelés elinditása {id="observationmanagement-open"}
-#### Követelmények: {id="observationmanagement-open-requirments"}
+
+#### Követelmények: {id="observationmanagement-open-requirements"}
+
 - Lehetőség hogy a megfigyelt állat megfigyelését elindítsák (adatlapon keresztül) a következők megadásával:
   - Megfigyelés oka
   - Megfigyelés javasolt ideje
   - Állat tároló azonosító 
 
 ### Megfigyelés lezárása {id="observationmanagement-close"}
-#### Követelmények: {id="observationmanagement-close-requirments"}
+
+#### Követelmények: {id="observationmanagement-close-requirements"}
+
 - Lehetőség hogy a megfigyelt állat megfigyelését leállítsák (adatlapon keresztül)
 - Lehetőség megjegyzés megadására
 
 ### Megfigyelés adatainak módosítása {id="observationmanagement-modifydata"}
-#### Követelmények: {id="observationmanagement-modifydata-requirments"}
+
+#### Követelmények: {id="observationmanagement-modifydata-requirements"}
+
 - Lehetőség az alábbiak módosítására: 
   - Megfigyelés oka
   - Megfigyelés javasolt ideje
@@ -441,7 +519,9 @@ A kijelölés után felugrik egy adatlap amit ki kell tölteni.
 
 ### Megfigyelés alatt álló gyógyszerezésének kezelése
 {id="observationmanagement-managemedicaton"}
-#### Követelmények: {id="observationmanagement-managemedicaton-requirments"}
+
+#### Követelmények: {id="observationmanagement-managemedicaton-requirements"}
+
 - Lehetőség a gyógyszerezési ütemezés beállítására (perc alapú ütemezés, a gyógyszereket a katalógusból válassza ki)
 - Lehetőség gyógyszerezési ütemezés szerkesztésére
 - Lehetőség a gyógyszerezési ütemezés törlésére
